@@ -16,7 +16,7 @@ app.use(express.static(__dirname))
 
 mongoose.set("strictQuery", false);
 mongoose
-  .connect("mongodb://127.0.0.1:27017/todolistDB")
+  .connect("mongodb+srv://vercel-admin-user:M4zoQK9SxvK4K6TY@cluster0.s2kgswl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
   .then(console.log("connected to mongodb"))
   .catch((err) => {
     console.log(err);
