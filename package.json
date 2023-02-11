@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "tailwindcss build src/style.css -o public/style.css --watch"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
