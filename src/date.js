@@ -28,13 +28,25 @@ exports.getDay = function () {
 
 exports.greet = ()=>{
 let timeNow = new Date().getHours();
-let greeting =
-  timeNow >= 5 && timeNow < 12
-    ? "Good Morning"
-    : timeNow >= 12 && timeNow < 18
-    ? "Good Afternoon"
-    : "Good evening";
- return greeting
+
+let greeting;
+if(timeNow >= 5 && timeNow < 12){
+  greeting = "Good Morning";
+  return greeting
+}
+else if(timeNow >= 12 && timeNow < 15 ){
+  greeting = "Good Afternoon";
+  return greeting
+}
+else if(timeNow >=15 && timeNow < 19 ){
+  greeting = "Good Evening"
+  return greeting
+}
+else{
+  greeting = "Good Night"
+  return greeting
+}
+ 
 
 }
 
