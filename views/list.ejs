@@ -1,0 +1,154 @@
+<%- include("header") -%>
+<section>
+  <div class="tasks p-4 text-2xl font-bold">
+    <p>
+      You've got <span class="text-blue-700 font-extrabold"><%= count %></span> tasks
+      today.
+    </p>
+  </div>
+  <div class="calender  p-4 flex capitalize overflow-x-auto lg:space-x-10">
+    <div
+      class="bg-blue-600 text-blue-50 w-16 h-24 rounded-[18px] py-4 mx-1 drop-shadow-lg px-1"
+    >
+      <div class="day mx-3 py-1 font-extralight">mon</div>
+      <div class="date mx-4 font-extrabold">13</div>
+    </div>
+    <div
+      class="bg-blue-600 text-blue-50 w-16 h-24 rounded-[18px] py-4 mx-1 drop-shadow-lg px-1"
+    >
+      <div class="day mx-3 py-1 font-extralight">tue</div>
+      <div class="date mx-4 font-extrabold">14</div>
+    </div>
+    <div
+      class="bg-blue-600 text-blue-50 w-16 h-24 rounded-[18px] py-4 mx-1 drop-shadow-lg px-1"
+    >
+      <div class="day mx-3 py-1 font-extralight">Web</div>
+      <div class="date mx-4 font-extrabold">15</div>
+    </div>
+    <div
+      class="bg-blue-600 text-blue-50 w-16 h-24 rounded-[18px] py-4 mx-1 drop-shadow-lg px-1"
+    >
+      <div class="day mx-3 py-1 font-extralight">Thu</div>
+      <div class="date mx-4 font-extrabold">16</div>
+    </div>
+    <div
+      class="bg-blue-600 text-blue-50 w-16 h-24 rounded-[18px] py-4 mx-1 drop-shadow-lg px-1"
+    >
+      <div class="day mx-3 py-1 font-extralight">fri</div>
+      <div class="date mx-4 font-extrabold">17</div>
+    </div>
+    <div
+      class="bg-blue-600 text-blue-50 w-16 h-24 rounded-[18px] py-4 mx-1 drop-shadow-lg px-1"
+    >
+      <div class="day mx-3 py-1 font-extralight">sat</div>
+      <div class="date mx-4 font-extrabold">18</div>
+    </div>
+    <div
+      class="bg-blue-600 text-blue-50 w-16 h-24 rounded-[18px] py-4 mx-1 drop-shadow-lg px-1"
+    >
+      <div class="day mx-3 py-1 font-extralight">sun</div>
+      <div class="date mx-4 font-extrabold">19</div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="todos-section-title flex font-extrabold text-xl my-4">
+    <div class="todos-section-title-todo mx-4 py-1  text-2xl">
+      Top <span class="text-blue-600">Priority</span> Task
+    </div>
+
+  </div>
+  <div class="todos-section-cards flex p-4  overflow-x-auto">
+    <% newListItems.forEach((item)=>{ %>
+    <div class="cards w-[220px] flex flex-col justify-between min-w-[220px] lg:min-w-[220px] h-32  bg-blue-500 text-yellow-50 p-4 rounded-xl shadow-lg mx-2">
+        <div class="card-header flex justify-between text-sm font-light ">
+            <div class="card-title capitalize"><%= item.catogory %></div>
+            <div class="card-edit text-[#FFAD47] text-lg">
+              <form action="/delete/<%= item._id %>" method="post">
+                <button type="submit">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              
+            </form>
+            </div>
+        </div>
+        <div class="card-main-task  text-md font-bold  ">
+            <p><%= item.name %></p>
+        </div>
+        <div class="card-date text-sm  font-light">
+            <p><%=  item.date %></p>
+        </div>
+    </div>
+    <% }) %>
+    
+    
+  </div>
+</section>
+<section>
+  <div class="todos-section-title flex font-extrabold text-xl my-4">
+    <div class="todos-section-title-todo mx-4 py-1  text-2xl">
+      Top <span class="text-blue-600">Personal</span> Task
+    </div>
+
+  </div>
+  <div class="todos-section-cards flex  p-4 overflow-x-auto">
+    <% personal.forEach((item)=>{ %>
+    <div class="cards w-[220px]  flex flex-col justify-between min-w-[220px] lg:min-w-[220px] h-32  bg-blue-500 text-yellow-50 p-4 rounded-xl shadow-lg mx-2">
+        <div class="card-header flex justify-between text-sm font-light ">
+            <div class="card-title capitalize"><%= item.catogory %></div>
+            <div class="card-edit text-[#FFAD47] text-lg">
+              <form action="/delete/<%= item._id %>" method="post">
+                <button type="submit">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              
+            </form>
+            </div>
+        </div>
+        <div class="card-main-task  text-md font-bold  ">
+            <p><%= item.name %></p>
+        </div>
+        <div class="card-date text-sm  font-light">
+            <p><%=  item.date %></p>
+        </div>
+    </div>
+    <% }) %>
+    
+    
+  </div>
+</section>
+<section>
+  <div class="todos-section-title  flex font-extrabold text-xl my-4 ">
+    <div class="todos-section-title-todo mx-4 py-1  text-2xl">
+      Top <span class="text-blue-600">Professional</span> Task
+    </div>
+
+  </div>
+  <div class="todos-section-cards flex p-4 overflow-x-auto mb-24 ">
+    <% professional.forEach((item)=>{ %>
+    <div class="cards w-[220px] flex flex-col justify-between min-w-[220px] lg:min-w-[220px] h-32  bg-blue-500 text-yellow-50 p-4 rounded-xl shadow-lg mx-2">
+        <div class="card-header flex justify-between text-sm font-light ">
+            <div class="card-title capitalize"><%= item.catogory %></div>
+            <div class="card-edit text-[#FFAD47] text-lg">
+              <form action="/delete/<%= item._id %>" method="post">
+                <button type="submit">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              
+            </form>
+            </div>
+        </div>
+        <div class="card-main-task  text-md font-bold  ">
+            <p><%= item.name %></p>
+        </div>
+        <div class="card-date text-sm  font-light">
+            <p><%=  item.date %></p>
+        </div>
+    </div>
+    <% }) %>
+    
+    
+  </div>
+</section>
+
+<%- include("footer") -%>
