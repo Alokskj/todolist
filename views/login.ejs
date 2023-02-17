@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/public/favicon/android-chrome-512x512.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style></style>
+  <script src="https://kit.fontawesome.com/eee52e107d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="">
+  <div class="container flex flex-col justify-between  align-middle m-4">
+    <div class="header-main flex justify-between mx-2">
+      <div class="register-header">
+        <h1 class="font-bold text-2xl ">Get started!</h1>
+      </div>
+      <div class="login-button">
+        <button class="bg-blue-800 text-white rounded-md px-4 py-2 mr-6" ><a href="/">Create </a></button>
+      </div>
+    </div>
+    <div class="form-container lg:w-full  flex flex-col lg:items-center  mt-16 p-1 mr-6 ">
+      <div class="create-account flex flex-col justify-center lg:items-center ">
+        <p class="text-4xl font-bold ">Login an Account</p>
+        <p class="font-light">Let's get Started with your todo's</p>
+      </div>
+      <div class="form mt-10   space-y-3 ">
+        <form action="/login" method="post">
+        <div class="email">
+          <label for="email"></label>
+          <input class="border-b-2 p-4 text-md font-bold w-full capitalize" name="username" required type="text" placeholder="email" />
+        </div>
+        <div class="password mb-4">
+          <label for="password"></label>
+          <input class="border-b-2 p-4 text-md font-bold w-full capitalize" name="password" required type="password" placeholder="Password">
+        </div>
+        <div class="buttons flex flex-col  items-center space-y-3 mt-12 ">
+          <div class="submit-button">
+            <button class="bg-blue-800  text-lg text-yellow-50 px-24 py-2 rounded-2xl">Login Account</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+
+    <!-- nav ends -->
+</body>
+
+</html>
