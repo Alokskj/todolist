@@ -28,7 +28,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "http://todos.alokskj.gq/auth/google/secrets",
+      callbackURL: "https://todos.alokskj.gq/auth/google/secrets",
     },
     function (accessToken, refreshToken, profile, cb) {
       user.findOrCreate(
