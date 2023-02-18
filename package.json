@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "build": "node index.js",
+    "start": "node index.js",
     "watch": "npx tailwindcss -i ./src/style.css -o ./public/css/style.css --watch"
   },
   "author": "",
