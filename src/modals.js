@@ -6,6 +6,29 @@ const modules = require("./modules.js")
 const userSchema = new mongoose.Schema({
     name: String,
     username: String,
+    picture: String,
+    todo: [
+      {
+        name: String,
+        catogory: {
+          type: String,
+          default: 'Personal',
+          lowercase : true,
+          trim: true,
+          
+        },
+        date: {
+          type: String,
+          default: date.getDate()
+        },
+        time:{
+          type: Date,
+          default : Date.now
+        },
+        description: String,
+
+      }
+    ],
     password: String,
     googleId: String,
   });

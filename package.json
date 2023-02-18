@@ -2,9 +2,10 @@
   "name": "todolist-v1",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "build": "node index.js",
-    "watch": "npx tailwindcss -i ./src/style.css -o ./views/style.css --watch"
+    "watch": "npx tailwindcss -i ./src/style.css -o ./public/css/style.css --watch"
   },
   "author": "",
   "license": "ISC",
